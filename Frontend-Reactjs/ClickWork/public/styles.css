@@ -1,0 +1,351 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Montserrat", sans-serif;
+}
+
+header{
+  position: fixed;
+  z-index: 99;
+  width:100%; 
+}
+
+body {
+  /*padding-top: 3rem;*/
+  padding-bottom: 3rem;
+  color: #5a5a5a;
+}
+/*top-page*/
+.btn{
+  color: white;
+}
+
+.btn2{
+  color: black;
+}
+.block{
+  display:block;
+}
+
+.submit{
+ margin-right: 10px;
+}
+.container{
+  height: 37rem;
+  padding: 7% 15%;
+}
+.big-heading {
+  font-family: "Montserrat-Black";
+  font-size:4rem;
+  line-height: 1.5;
+}
+.title-image {
+
+  width: 580px;
+  height: 650px;
+  padding-top: 15rem;
+  padding-bottom: 0rem;
+  position: absolute;
+  right: 0%;
+  left: 120%;
+  bottom: 1%;
+
+}
+.letter{
+  color: #4d4d4d;
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+}
+.dropdown-toggle{
+  margin-left: 15px;
+}
+
+.style-btn{
+  color: green
+}
+
+.style-btn:hover{
+  color: white
+}
+
+.search-btn{
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.search-btn:hover {
+  background-color: #ddd;
+}
+
+/* Add a dark background to the active button */
+.search-btn.active {
+  background-color: #666;
+  color: white;
+}
+
+
+/* CUSTOMIZE THE CAROUSEL
+---------------------------------*/
+/* Carousel base class */
+.carousel {
+  margin-bottom: 4rem;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  height: 30rem;
+  background-color:#404040;
+}
+.carousel-item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 39rem;
+}
+
+.btn-space{
+  margin:10px;
+}
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.marketing h2 {
+  font-weight: 400;
+}
+.marketing .col-lg-4 p {
+  margin-right: .75rem;
+  margin-left: .75rem;
+}
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -.05rem;
+}
+.feature-anu-img{
+  width: 150%;
+  height:100%;
+  position: absolute;
+  top:0%;
+  right: 20%;
+  left: 0%;
+  bottom:10%;
+}
+.feature-anu2-img{
+  width: 150%;
+  height:100%;
+  position: absolute;
+  top:0%;
+  right: 60%;
+  left: 0.05%;
+  bottom:10%;
+}
+.feature{
+  margin-left: 25px;
+}
+
+.footer{
+  margin-left: 50px;
+  margin-bottom: 50px;
+  margin-right: 30px;
+  margin-top: 50px;
+}
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 40em) {
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem;
+  }
+}
+
+/* Jobs section*/
+.newsfeed{
+  color: #000;
+  line-height: 2;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  font-family: "Montserrat-Black";
+  font-size: 3rem;
+  line-height: 1.5;
+  font-weight: 400;
+ 
+}
+
+.dictionary > .term {
+  
+  max-width: 100rem;
+  /*margin-bottom: 3rem;
+  margin-left: 20rem;
+  margin-right: 20rem; */
+  padding: 2rem;
+  border-radius: 3px;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.05), 0 5px 20px rgba(0, 0, 0, 0.1);
+  background-color:#f8fff5;
+  transition: all 100ms ease-in-out;
+}
+
+.dictionary > .term > dt {
+  margin-bottom: 1rem;
+  color:#0000;
+}
+
+.pagination {
+  margin-left: 20rem;
+}
+
+dt span {
+  font-size: 200%;
+  font-family: "Montserrat-Black";
+  font-weight: 300;
+  color: #000;
+}
+
+dd {
+  font-size: 90%;
+  margin: 10px;
+}
+
+.newsfeed{
+  color: #000;
+  line-height: 1;
+  text-align: center;
+  
+}
+.feed{
+  background-color: #939492;
+}
+
+#upprofilephoto{
+  background-color: black;
+  border: black;
+}
+
+#upprofilephoto:hover{
+  background-color: gray;
+}
+
+.log-in-div{
+  margin-top: 50px;
+}
+
+.log-in{
+  background-color: #f5f5f5;
+}
+
+.log-in-form{
+  margin-bottom: 50px;
+}
+
+#log-in-btn-div{
+  margin-top: 8px;
+}
+
+#log-in-img{
+  margin-bottom: 10px; 
+}
+
+/* Sign Up */
+.pass{
+  margin-right: 300px;
+}
+.signup-title{
+  color: black;
+  padding-bottom: 40px;
+}
+.sign-body {
+  display: flex;
+  align-items: center;
+  padding-top: 20px; 
+  background-color: #f5f5f5;
+  height:600px;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px; 
+  margin: auto;
+  
+}
+.acc-type
+{
+  margin-right: 5px;
+  margin-left: 5px;
+  margin-top: 20px;
+}
+
+.form-signin .checkbox {
+  font-weight: 400;
+  
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: 5px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="text"] {
+  margin-bottom: 5px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 5px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.form-signin confirm input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+#create-profile-container{
+  max-width: 960px;
+}

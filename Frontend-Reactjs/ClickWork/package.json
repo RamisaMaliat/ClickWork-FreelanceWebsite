@@ -1,0 +1,52 @@
+{
+  "name": "keeper-app-part-1-starting",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "main": "src/index.js",
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "@fortawesome/react-fontawesome": "^0.1.14",
+    "@popperjs/core": "^2.9.2",
+    "axios": "^0.21.1",
+    "bootstrap": "^4.6.0",
+    "connected-react-router": "^6.9.1",
+    "dotenv": "^10.0.0",
+    "jquery": "^3.6.0",
+    "js-cookie": "^2.2.1",
+    "popper.js": "^1.16.1",
+    "react": "16.8.6",
+    "react-alert": "^7.0.3",
+    "react-bootstrap": "^1.6.1",
+    "react-dom": "16.8.6",
+    "react-js-pagination": "^3.0.3",
+    "react-message-box": "^1.0.6",
+    "react-popper": "^2.2.5",
+    "react-redux": "^7.2.4",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.2.0",
+    "react-session-api": "^1.1.0",
+    "react-table": "^7.7.0",
+    "react-toastify": "^7.0.4",
+    "redux": "^4.1.0",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-thunk": "^2.3.0",
+    "web-vitals": "^2.1.0"
+  },
+  "devDependencies": {
+    "typescript": "3.3.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
