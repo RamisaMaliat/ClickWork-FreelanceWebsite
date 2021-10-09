@@ -55,9 +55,9 @@ class AssignJob extends React.Component {
             .then((data) => {
                 console.log(data);
                 //this.props.history.push("/sendinvitation"+data);
-                toast.info("Invitation Sent!", { position: "top-center", autoClose: 3000});
+                toast.info("Job Assigned!", { position: "top-center", autoClose: 3000});
                 setTimeout(function() {
-                    window.location.replace("/sendinvitation"+data);  
+                    window.location.replace("/assignjob"+data);  
                 }, 3000);
                 
             });

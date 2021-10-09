@@ -59,6 +59,7 @@ import RemoveJob from "./components/RemoveJob";
 import RepostJob from "./components/RepostJob";
 import ViewJobDetailsByClient3 from "./components/ViewJobDetailsByClient3";
 import AssignJob from "./components/AssignJob";
+import AssignJobFreelancers from "./components/AssignJobFreelancers";
 
 
 if (window.location.origin === "http://localhost:3000") {
@@ -77,7 +78,9 @@ class App extends Component {
           <Switch>
             <Route path="/signup" component={Signup} />
             <Route path="/login" component={Login} />
+            <Route path="/assignjob:jobid" component={requireAuth(AssignJobFreelancers)} />
             <Route path="/client/sendinvitation:jobid/to:freelancerid" component={requireAuth(Invite)} />
+            <Route path="/client/assignjob:jobid/to:freelancerid" component={requireAuth(AssignJob)} />
             <Route path="/client/approve/:jobid/doneby:freelancerusername" component={requireAuth(ApproveAJob)} />
             <Route path="/client/job/details/:id/proposals" component={requireAuth(ViewJobDetailsByClient2)} />
             <Route path="/client/job/details/:id/assigned" component={requireAuth(ViewJobDetailsByClient3)} />
@@ -88,7 +91,6 @@ class App extends Component {
             <Route path="/client/completedjobs" component={requireAuth(CompletedJobs)} />
             <Route path="/client/:jobid" component={requireAuth(ViewClientProfile2)} />
             <Route path="/removejob/:jobid" component={requireAuth(RemoveJob)} />
-            <Route path="/assignjob/:jobid" component={requireAuth(AssignJob)} />
             <Route path="/repostjob/:jobid" component={requireAuth(RepostJob)} />
             <Route path="/postjob" component={requireAuth(PostAJob)} />
             <Route path="/freelancer/myprofile" component={requireAuth(ViewMyProfile)} />

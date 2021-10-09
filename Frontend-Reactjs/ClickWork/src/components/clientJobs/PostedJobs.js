@@ -31,8 +31,9 @@ const Posts = ({ posts, loading }) => {
           <div style={{"paddingTop":"10px"}}>
           <a href={"/client/job/details/"+post.JobId}><button type="button" className="btn btn-outline-success">View details</button></a>
           {post.Removed==0 ? <a href={"/sendinvitation"+post.JobId}><button type="button" className="btn btn-outline-success">Send Invitation</button></a> : ''}
+          {post.Removed==0 ? <a href={"/assignjob"+post.JobId}><button type="button" className="btn btn-outline-success" >Assign</button></a> : ''}
           {post.Removed==0 ? <a href={"/removejob/"+post.JobId}><button type="button" className="btn btn-outline-success" >Remove Post</button></a> : ''}
-          {post.Removed==0 ? <a href={"/assignjob/"+post.JobId}><button type="button" className="btn btn-outline-success" >Assign</button></a> : ''}
+          
           {post.Removed==1 ? <a href={"/repostjob/"+post.JobId}><button type="button" className="btn btn-outline-success" >Repost Job</button></a> : ''}
           </div>
         </div>

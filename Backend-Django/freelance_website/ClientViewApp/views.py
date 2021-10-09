@@ -160,6 +160,26 @@ def removejob(request,jobid):
         return JsonResponse("success", safe=False)
 
 @csrf_exempt
+def assignjob(request,jobid,freelancerid):
+    if request.method=='GET':
+        headers_token = request.META['HTTP_AUTHORIZATION'][7:]
+        print(headers_token)
+        user = Token.objects.get(key=headers_token).user
+        print(user)
+
+        query = '''INSERT OR REPLACE INTO History(FreelancerID,JobID,Status) VALUES 
+            ({var_freelancerid},{var_jobid},'assigned') 
+            '''.format(var_jobid=jobid,var_freelancerid=freelancerid)
+
+        conn = sqlite3.connect('db.sqlite3')
+        cur = conn.cursor()
+        cur.execute(query)
+        conn.commit()
+        cur.close()
+        conn.close()
+        return JsonResponse(jobid, safe=False)
+
+@csrf_exempt
 def repostjob(request,jobid):
     if request.method=='GET':
         headers_token = request.META['HTTP_AUTHORIZATION'][7:]
