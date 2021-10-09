@@ -46,7 +46,7 @@ const Posts = ({ posts, loading }) => {
           </dt>
           </Col>
           </Row>
-          <dd> <b>{"Category" + " " + ":" + " " + " "}</b>{job.CategoryName}</dd>
+          <dd> <b>{"Category" + " " + ":" + " " + " "}</b><span>{job.CategoryName}</span></dd>
           <dd> <b>{"Description" + " " + ":" + " " + " "}</b>{job.Description}</dd>
           <dd><b>{"Skills" + " " + ":" + " " + " "}</b>{job.Skills}</dd>
           <dd><b>{"Additional Requirements" + " " + ":" + " " + " "}</b>{job.AdditionalRequirements}</dd>

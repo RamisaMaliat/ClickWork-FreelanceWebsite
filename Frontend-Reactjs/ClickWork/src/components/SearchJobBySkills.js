@@ -48,7 +48,7 @@ const Posts = ({ posts, loading }) => {
           </Row>
           <dd> <b>{"Category" + " " + ":" + " " + " "}</b>{job.CategoryName}</dd>
           <dd> <b>{"Description" + " " + ":" + " " + " "}</b>{job.Description}</dd>
-          <dd><b>{"Skills" + " " + ":" + " " + " "}</b>{job.Skills}</dd>
+          <dd class="search_skills"><b>{"Skills" + " " + ":" + " " + " "}</b><span>{job.Skills}</span></dd>
           <dd><b>{"Additional Requirements" + " " + ":" + " " + " "}</b>{job.AdditionalRequirements}</dd>
           <u><b>Offered By : </b></u>
           <dd><b>{"Client Name" + " " + ":" + " " + " "}</b> {job.ClientName}</dd>
@@ -157,6 +157,8 @@ class SearchJobBySkills extends Component {
     let profiles = document.getElementsByClassName('term');
 
     let usernames = document.getElementsByClassName('search_skills');
+
+    console.log(usernames);
 
     for (var i = 0; i < profiles.length; i++) {
       let username = usernames[i].getElementsByTagName('span')[0];

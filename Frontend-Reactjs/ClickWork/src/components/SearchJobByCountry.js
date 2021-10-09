@@ -55,7 +55,7 @@ const Posts = ({ posts, loading }) => {
           <dd><b>{"Company Name" + " " + ":" + " " + " "}</b> {job.CompanyName}</dd>
           <dd><b>{"Email" + " " + ":" + " " + " "}</b> {job.Email}</dd>
           <dd><b>{"City" + " " + ":" + " " + " "}</b> {job.City}</dd>
-          <dd><b>{"Country" + " " + ":" + " " + " "}</b> {job.Country}</dd>
+          <dd class="search_country"><b>{"Country" + " " + ":" + " " + " "}</b><span>{job.Country}</span></dd>
 
           <a href={"/jobs/"+job.JobId}><button type="button" className="btn btn-outline-success submit">Submit Proposal</button></a>
           <a href={"/job/details/"+job.JobId}><button type="button" className="btn btn-outline-success">View Job details<FontAwesomeIcon icon="Bookmark" /></button></a>

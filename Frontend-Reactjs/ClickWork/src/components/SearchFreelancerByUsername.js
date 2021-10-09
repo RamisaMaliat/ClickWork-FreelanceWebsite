@@ -45,20 +45,21 @@ const Posts = ({ posts, loading }) => {
             <Row>
             <Col>
 
-              <dd> <b>{"Name" + " " + ":" + " " + " "}</b>{profile.Name}</dd>
+            <dd class="search_name"> <b>{"Name" + " " + ":" + " " + " "}</b><span>{profile.Name}</span></dd>
               <dd class="search_user"> <b>{"Username" + " " + ":" + " " + " "}</b><span>{profile.Username}</span></dd>
-              <dd><b>{"City" + " " + ":" + " " + " "}</b> {profile.City}</dd>
-              <dd><b>{"Country" + " " + ":" + " " + " "}</b> {profile.Country}</dd>
-              <dd><b>{"Educational Institution" + " " + ":" + " " + " "}</b> {profile.EducationalInstitution}</dd>
-              <dd><b>{"Educational Qualifications" + " " + ":" + " " + " "}</b> {profile.EducationalQualifications}</dd>
-              <dd><b>{"Employment" + " " + ":" + " " + " "}</b> {profile.Employment}</dd>
-              <dd><b>{"Company Name" + " " + ":" + " " + " "}</b> {profile.CompanyName}</dd>
-              <dd><b>{"Field of work" + " " + ":" + " " + " "}</b> {profile.CategoryName}</dd>
-              <dd><b>{"Skills" + " " + ":" + " " + " "}</b> {profile.Skills}</dd>
-              <dd><b>{"Email" + " " + ":" + " " + " "}</b> {profile.Email}</dd>
-              <dd><b>{"Additional Contact Details" + " " + ":" + " " + " "}</b></dd>
+              <dd class="search_country"><b>{"City" + " " + ":" + " " + " "}</b><span>{profile.City}</span></dd>
+              <dd ><b>{"Country" + " " + ":" + " " + " "}</b><span>{profile.Country}</span></dd>
+              <dd ><b>{"Educational Institution" + " " + ":" + " " + " "}</b><span>{profile.EducationalInstitution}</span></dd>
+              <dd ><b>{"Educational Qualifications" + " " + ":" + " " + " "}</b><span>{profile.EducationalQualifications}</span></dd>
+              <dd ><b>{"Employment" + " " + ":" + " " + " "}</b><span>{profile.Employment}</span></dd>
+              <dd ><b>{"Company Name" + " " + ":" + " " + " "}</b><span>{profile.CompanyName}</span></dd>
+              <dd ><b>{"Field of work" + " " + ":" + " " + " "}</b><span>{profile.CategoryName}</span></dd>
+              <dd class="search_skills"><b>{"Skills" + " " + ":" + " " + " "}</b><span>{profile.Skills}</span></dd>
+              <dd ><b>{"Email" + " " + ":" + " " + " "}</b><span>{profile.Email}</span></dd>
+              <dd ><b>{"Additional Contact Details" + " " + ":" + " " + " "}</b></dd>
               <dd>{profile.AdditionalContactDetails}</dd>
 
+              
               <a class="style-btn" href={"/viewfreelancerprofile/" + profile.Username}><button style={{ "marginTop": "10px", "fontSize": "16px" }} type="button" className="btn btn-outline-success submit ">View Profile</button></a>
             </Col>
             <Col style={{ "maxWidth": "300px"}}>

@@ -51,7 +51,7 @@ const Posts = ({ posts, loading }) => {
           <dd><b>{"Skills" + " " + ":" + " " + " "}</b>{job.Skills}</dd>
           <dd><b>{"Additional Requirements" + " " + ":" + " " + " "}</b>{job.AdditionalRequirements}</dd>
           <u><b>Offered By : </b></u>
-          <dd><b>{"Client Name" + " " + ":" + " " + " "}</b> {job.ClientName}</dd>
+          <dd class="search_name"><b>{"Client Name" + " " + ":" + " " + " "}</b><span>{job.ClientName}</span></dd>
           <dd><b>{"Company Name" + " " + ":" + " " + " "}</b> {job.CompanyName}</dd>
           <dd><b>{"Email" + " " + ":" + " " + " "}</b> {job.Email}</dd>
           <dd><b>{"City" + " " + ":" + " " + " "}</b> {job.City}</dd>
