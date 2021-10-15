@@ -38,12 +38,13 @@ def viewmyprofile(request):
         Skills,
         Category.Name as CategoryName,
         auth_user.email as Email,
+        Freelancer.Description as Description,
         Additional_Contact_Details as AdditionalContactDetails
         FROM Freelancer, Category, auth_user
         WHERE Freelancer.CategoryID = Category.ID AND auth_user.username = '{var_user}' AND
         Freelancer.username = '{var_user}' '''.format(var_user=user)
-        freelancer = ViewMyProfileModel.objects.raw(query)
-        freelancer_serializer = ViewMyProfileSerializer(freelancer, many=True)
+        freelancer = ViewFreelancerProfileModel.objects.raw(query)
+        freelancer_serializer = ViewFreelancerProfileSerializer(freelancer, many=True)
         return JsonResponse(freelancer_serializer.data, safe=False)
 
 def viewassignedjobs(request):
@@ -357,6 +358,23 @@ def getcategory(request):
         conn.close()
         return JsonResponse(id, safe=False)
 
+def getrate(request):
+    headers_token = request.META['HTTP_AUTHORIZATION'][7:]
+    print(headers_token)
+    user = Token.objects.get(key=headers_token).user
+    print(user)
+    
+    if request.method == 'GET':
+        query = '''SELECT Hourly_Rate FROM Freelancer where username = '{var_user}'
+        '''.format(var_user=user)
+        conn = sqlite3.connect('db.sqlite3')
+        cur = conn.cursor()
+        cur.execute(query)
+        rate = cur.fetchone()[0]
+        cur.close()
+        conn.close()
+        return JsonResponse(rate, safe=False)
+
 @csrf_exempt
 def sentProposal(request):
     if request.method=='POST':
@@ -473,6 +491,52 @@ def signup(request):
         ('{var_user}','{vname}','{vcity}','{vcountry}','{vinst}','{vdegree}','{vemp}','{vcomp}','{vskills}',{vcat},'{vadd}')
         '''.format(var_user=user, vname=name, vcat=category,vcomp=company,
         vcountry=country,vcity=city,vadd=additionalContacts,vskills=skills,vinst=institution,vdegree=degree,vemp=employment)
+
+        conn = sqlite3.connect('db.sqlite3')
+        cur = conn.cursor()
+        cur.execute(query)
+        conn.commit()
+        cur.close()
+        conn.close()
+        return JsonResponse("success", safe=False)
+
+@csrf_exempt
+def updatedescription(request):
+    if request.method=='POST':
+        headers_token = request.META['HTTP_AUTHORIZATION'][7:]
+        print(headers_token)
+        user = Token.objects.get(key=headers_token).user
+        print(user)
+
+        data = JSONParser().parse(request)
+        details = data['details']
+
+        query = '''Update Freelancer Set Description='{var_details}'
+        where Username='{var_user}'
+        '''.format(var_user=user, var_details=details)
+
+        conn = sqlite3.connect('db.sqlite3')
+        cur = conn.cursor()
+        cur.execute(query)
+        conn.commit()
+        cur.close()
+        conn.close()
+        return JsonResponse("success", safe=False)
+
+@csrf_exempt
+def updaterate(request):
+    if request.method=='POST':
+        headers_token = request.META['HTTP_AUTHORIZATION'][7:]
+        print(headers_token)
+        user = Token.objects.get(key=headers_token).user
+        print(user)
+
+        data = JSONParser().parse(request)
+        details = data['details']
+
+        query = '''Update Freelancer Set Description='{var_details}'
+        where Username='{var_user}'
+        '''.format(var_user=user, var_details=details)
 
         conn = sqlite3.connect('db.sqlite3')
         cur = conn.cursor()
