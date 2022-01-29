@@ -38,7 +38,7 @@
       - View Profile
   ### Clients
     - Create, update and view profile/personal details
-    - Upload profile pictures
+    - Upload and update profile pictures
     - Find Talent 
       - Searching profiles with filters
       - View Profile
