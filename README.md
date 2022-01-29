@@ -6,3 +6,12 @@
 
 [ClickWork - Final Presentation.pptx](https://github.com/RamisaMaliat/ClickWork-FreelanceWebsite/files/7940428/ClickWork.-.Final.Presentation.pptx)
 
+## Features
+- Two different type of user accounts - freelancers and clients
+- Freelancer and client profiles 
+- Categorizing profiles and job offers
+- Advanced search features
+- Fully responsive site
+
+
+
