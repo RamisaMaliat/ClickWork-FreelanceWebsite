@@ -13,5 +13,52 @@
 - Advanced search features
 - Fully responsive site
 
+  ### Guest users
+    - View freelancers’ profiles
+    - View job offers
+    - Options for sign up and log in
+  ### Freelancers
+    - Create, update and view profile/personal details
+      - Add bio
+      - Add hourly rate
+    - Upload and update profile pictures
+    - Personalized feed 
+    - Find work 
+      - Searching jobs with filters
+      - Submitting proposals
+      - View Client Profile
+    - Dashboard
+      - Assigned jobs
+      - Completed jobs
+      - Approved jobs
+      - Invitations
+      - Proposals
+    - Find Talent
+      - Searching profiles with filters
+      - View Profile
+  ### Clients
+    - Create, update and view profile/personal details
+    - Upload profile pictures
+    - Find Talent 
+      - Searching profiles with filters
+      - View Profile
+      - Sending invitations
+    - Posting Job Offers
+    - Client Job Offers
+      - Posted jobs
+      - View job details, invitations and proposals
+      - Approved jobs
+      - Completed jobs to be reviewed
+    - Find Talent
+      - Searching profiles with filters
+      - View Profile
+
+
+
+  
+
+
+
+
 
 
